@@ -1,0 +1,91 @@
+/* 设置hr标签的样式 */
+hr{
+    border: none;
+    border-top: 2px solid gold;
+}
+/* 去除ul li默认样式 */
+.noneStyle{
+    list-style: none;
+}
+body{
+    background-image: linear-gradient(to top, #ffa3d8, #deb9fe, #b6cfff, #9ae1ff, #9beeff, #a2f4f9, #adfaf3, #bbffed, #cbffe1, #dcfed7, #eefcd0, #ffface);
+    /* background: linear-gradient(35deg, #CCFFFF, #FFCCCC) */
+}
+/* 搜索栏样式 */
+.top .search_ul{
+    background-color: aliceblue;
+}
+/* 搜索栏logo样式 */
+.top .logo{
+    font-size: 30px;
+    font-weight: 800;
+    color: orange;
+}
+/* 搜索框样式设计 */
+#search_input{
+    border: 2px solid orange;
+    width:70%;
+    line-height: 30px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+}
+#search_submit{
+    height: 37px;
+    width: 20%;
+    background-image: linear-gradient(to bottom, #fed332, #fecf30, #ffcc2f, #ffc82e, #ffc42d);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    position: relative;
+    top: 2px;
+}
+/* 设置导航栏的样式 */
+.top .nav_ul{
+    background-color: rgb(255, 191, 118);
+}
+/* 导航栏里内容样式 */
+.top .navigation .navContent li{
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+.top .navigation .navContent li:hover{
+    background-color: #fffbc5;
+    cursor: pointer;
+}
+/* 模块介绍文字样式 */
+.layer_header{
+    font-size: 30px;
+    font-family: '字魂5号-无外润黑体','幼圆';
+}
+/* 对图片外边框设计样式 */
+.layer_body_list ul li{
+    padding: 10px 10px 0 10px;
+    border: 2px solid rgb(196, 196, 196);
+    background-color: white;
+    transition: all 1s;
+}
+/* 让图片自适应盒子大小 */
+.layer_body_list ul li img{
+    width: 90%;
+}
+.layer_body_list ul li .travel_p{
+    font-size: 13px;
+    font-family: '幼圆';
+    font-weight: 550;
+    position: relative;
+    top: 8px;
+}
+.layer_body_list ul li .travel_price{
+    color: rgb(255, 89, 0);
+    font-size: 25px;
+    font-weight: 800;
+}
+/* 底部信息栏样式 */
+.foot{
+    text-align: center;
+}

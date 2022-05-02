@@ -1,0 +1,88 @@
+.serv_box_li{
+    position: relative;
+    top: 10px;
+}
+.serv_box_li,.navbar,.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    position: relative;
+    padding: 10px;
+    border-radius: 50px;
+}
+.navbar input{
+    width: 30px;
+    height: 30px;
+    /* 将复选框的透明度设置为0，直接变透明 */
+    opacity: 0;
+    /* 鼠标变小手 */
+    cursor: pointer;
+}
+.navbar span{
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    height: 4px;
+    /* 现在将两条线放到一起，然后单独设置第二条线的位置，calc方法可以自动计算数值 */
+    top: calc(50% - 10px);
+    border-radius: 15px;
+    background-color: #999;
+    /* 现在的span是覆盖着复选框的，点击span时不会有反应，可以通过下面的属性来解决 */
+    pointer-events: none;
+    /* 收回时相反 */
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+    /* 现在过渡效果有点快，有点生硬 */
+}
+.navbar span:nth-child(3){
+    top: calc(50% + 6px);
+}
+.navbar ul{
+    width: 0;
+    overflow: hidden;
+    /* 在这里加个过渡，可以让展开和收起自然一点 */
+    transition: all 0.5s;
+    /* 同时，收起时的圆是扁的，是因为文字换行了 */
+    white-space: nowrap;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+/* 提示文字样式 */
+#serv_label{
+    font-size: 25px;
+    font-weight: 500;
+    color: gray;
+    margin: 0 0 0 20px;
+}
+#serv_label:hover{
+    color: orange;
+}
+.navbar ul li a:hover{
+    /* color: #fb7299; */
+    color: orange;
+}
+/* checked是当复选框被选中时，~是兄弟选择器，查找同一级的ul */
+.navbar input:checked ~ ul{
+    width: 350px;
+}
+.navbar input:checked ~ span:nth-child(2){
+    top: calc(50% - 2px);
+    transform: rotate(-45deg);
+    background-color: orange;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+.navbar input:checked ~ span:nth-child(3){
+    top: calc(50% - 2px);
+    transform: rotate(45deg);
+    background-color: orange;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}

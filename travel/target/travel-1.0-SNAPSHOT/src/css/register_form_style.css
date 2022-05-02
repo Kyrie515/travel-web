@@ -1,0 +1,124 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.form_box{
+    width: 100%;
+    height: 100%;
+    /* grid布局，并垂直水平居中 */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../data/image/login_image.jpg);
+    background-size: 120%;
+    /* background-position: 50%; */
+    animation: move ease-in-out 15s infinite;
+    /* background-color: #d5a6dc; */
+    /* background-image: linear-gradient(to right top, #e288ff, #dc7fff, #d675ff, #cf6cff, #c862ff); */
+    /* background-image: linear-gradient(to right top, #051937, #212558, #492c74, #792b89, #ae1d95); */
+}
+.register{
+    float: left;
+    /* 设置盒字大小 */
+    width: 80vw;
+    height: 90%;
+    display: grid;
+    /* 将页面布局分为三栏 */
+    grid-template-columns: 31% auto 31%;
+    /* 水平居中显示 */
+    justify-items: center;
+    /* 垂直居中 */
+    align-items: center;
+    border-radius: 50px;
+    /* background-image: linear-gradient(to right top, #41bce9, #75bef5, #9fbffa, #c2c0f9, #dec3f4); */
+}
+.register form{
+    width: 100%;
+    height: 90%;
+    display: grid;
+    /* 让内容垂直居中 */
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #bbf9fb, #bffae9, #cef9d5, #e5f5c3, #ffeeb9);
+}
+.register .left{
+    display: flex;
+    flex-direction: column;
+}
+/* 设置左右文字样式 */
+.register .left p,.register .right p{
+    color: gray;
+    font-size: 20px;
+}
+.register .left .help{
+    font-size: 15px;
+    color: #ffeeb9;
+    margin-top: 400px;
+    padding-left: 50px;
+}
+/* 格式错误提示信息样式 */
+.register form .list.tips::after{
+    content: attr(err-tips);
+    color: rgb(255, 116, 116);
+    font-size: 13px;
+    font-weight: 600;
+    position: absolute;
+    margin: 50px 0 0 -260px;
+}
+/* 设置标签内容样式 */
+.td_left{
+    font-size: 19px;
+    /* font-family: '华文琥珀'; */
+    font-weight: 900;
+    text-align: right;
+}
+/* 设置input标签的左边距 */
+.td_right{
+    padding-left: 30px;
+}
+/* 设置表单样式 */
+.td_right input{
+    border: none;
+    border-radius: 7px;
+    height: 24px;
+    padding-left: 10px;
+}
+.td_flag{
+    padding-left: 10px;
+}
+/* 对提交按钮进行居中处理 */
+.submit_tr{
+    position: relative;
+    left: 150px;
+}
+/* 设置提交按钮样式 */
+.submit_tr input{
+    height: 33px;
+    width: 80px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgb(147, 172, 219);
+}
+#checkcode{
+    margin-right: 10px;
+}
+/* 设置验证码图片样式 */
+#verify_code_img_td{
+    width: 70px;
+    height: 30px;
+    overflow: hidden;
+    /* 让里面图片水平居中 */
+    text-align: center;
+    margin-left: 20px;
+    border: 5px dotted rgb(134, 122, 122);
+}
+/* 设置让图片垂直居中 */
+#verify_code_img_td img{
+    vertical-align: middle;
+}

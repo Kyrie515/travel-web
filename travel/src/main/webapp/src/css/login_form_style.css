@@ -1,0 +1,206 @@
+body,html,form,table,input{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.login_page{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* 页面布局：页眉，内容，页脚 */
+    grid-template-rows: 12% auto 15%;
+    grid-template-areas: 
+                        "top"
+                        "middle"
+                        "foot";
+}
+/* 定义顶部，内容，底部的grid-area */
+.top{
+    grid-area: top;
+    border-bottom: 1px solid gray;
+    display: grid;
+    /* 将页眉按比例分配布局 */
+    grid-template-columns: 30% 70%;
+    /* 让LOGO部分水平垂直居中 */
+    justify-items: center;
+    align-items: center;
+}
+.middle{
+    grid-area: middle;
+    display: grid;
+    align-items: center;
+    /* 分配登录框在页面中的布局 */
+    grid-template-columns: 5fr 400px 1fr;
+    grid-template-areas: 
+                        ". login_box .";
+    background-color: rgb(147, 99, 250);
+}
+.foot{
+    grid-area: foot;
+    border-top: 1px solid gray;
+    display: grid;
+    /* 让信息框水平居中 */
+    justify-items: center;
+    /* 将两行内容按1:4比例分配行 */
+    grid-template-rows: 20% 80%;
+}
+/* 页眉LOGO样式 */
+.top .logo{
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(255, 136, 0);
+}
+/* 登录框样式，并让登录框居中 */
+.login_box{
+    height: 85%;
+    grid-area: login_box;
+    background-color: rgb(225, 222, 222);
+    display: grid;
+    /* 让登录框中的内容水平居中 */
+    justify-items: center;
+    /* 让登录框内的内容按比例分配行 */
+    grid-template-rows: 10% auto 15%;
+    grid-template-areas: 
+                        "title_info"
+                        "login_info"
+                        "add_info";
+}
+/* 标题信息 */
+.title_info{
+    grid-area: title_info;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(63, 63, 63);
+}
+/* 登录信息 */
+.login_info{
+    width: 100%;
+    grid-area: login_info;
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+/* 附加信息 */
+.add_info{
+    width: 100%;
+    grid-area: add_info;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+/* 让登录框中的错误提示和表单按比例分配布局 */
+.login_info form{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+                        "error_tip"
+                        "table_box";
+}
+/* 错误提示信息样式 */
+.login_info .error_tip{
+    grid-area: error_tip;
+    position: relative;
+    width: 302px;
+    height: 30px;
+    top: 15px;
+    left: 3px;
+    line-height: 30px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: red;
+    background-color: rgb(255, 222, 222);
+}
+.table_box{
+    grid-area: table_box;
+}
+/* 登录信息输入框样式 */
+.login_info .input_tr input{
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    /* 去除选中后的默认样式 */
+    outline: none;
+    border: 1px solid rgb(170, 170, 170);
+}
+#identify_tr{
+    position: relative;
+}
+/* 验证码图片布局 */
+.login_info .input_tr .identify_box{
+    position: absolute;
+    top: 8px;
+    left: 240px;
+    width: 60px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    overflow: hidden;
+}
+/* 功能栏 */
+.login_info .login_fun{
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+    grid-template-areas: 
+                        "td_left . td_right";
+    justify-items: center;
+}
+/* 设置自动登录和注册的布局 */
+.td_left{
+    grid-area: td_left;
+}
+.td_right{
+    grid-area: td_right;
+}
+/* 移动自动登录按钮的位置 */
+#autoLogin{
+    position: relative;
+    top: 2px;
+    left: -2px;
+}
+/* 功能栏文字样式 */
+.login_info .login_fun a,.auto_login{
+    font-size: 13px;
+    color: gray;
+    text-decoration: none;
+}
+/* 登录按钮样式 */
+.login_info .submit_tr input{
+    margin-top: 5px;
+    width: 321px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: orange;
+}
+/* 底部文字样式 */
+.foot p{
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+}
+/* 底部链接栏布局 */
+.foot .about_link{
+    display: grid;
+    /* 让链接水平垂直居中 */
+    justify-content: center;
+    align-items: center;
+    /* 静态设置10个标签 */
+    grid-template-columns: repeat(10,60px);
+}
+/* 底部链接样式 */
+.foot .about_link a{
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(102, 102, 102);
+}

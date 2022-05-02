@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="src/css/login_form_style.css">
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="src/js/login_form.js"></script>
+</head>
+<body>
+    <div class="login_page">
+        <div class="top">
+            <div class="logo">LOGO 登录</div>
+        </div>
+        <div class="middle">
+            <div class="login_box">
+                <div class="title_info">账户登录</div>
+                <div class="login_info">
+                    <form id="login_form" action="#">
+                        <div class="error_tip" style="visibility: hidden;">错误，请输入正确的信息</div>
+                        <div class="table_box">
+                            <table>
+                                <tr class="input_tr">
+                                    <td><input type="text" name="username" id="username" placeholder="账户名"></td>
+                                </tr>
+                                <tr class="input_tr">
+                                    <td><input type="text" name="password" id="password" placeholder="密码"></td>
+                                </tr>
+                                <tr class="input_tr" id="identify_tr">
+                                    <td>
+                                        <input type="text" name="checkcode" id="checkcode" placeholder="验证码">
+                                        <div class="identify_box">
+                                            <img src="data/image/verify_code.jpg" width="60px" alt="verify Code">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="login_fun">
+                                    <td class="td_left"><input type="checkbox" id="autoLogin"><label class="auto_login" for="autoLogin">自动登录</label></td>
+                                    <td class="td_right"><a class="register" href="register.html" style="color: rgb(255, 151, 66);">注册</a></td>
+                                </tr>
+                                <tr class="submit_tr">
+                                    <td><input type="submit" value="登录"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                <div class="add_info">隐私策略</div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="intro">
+                <p>24小时客户服务电话(免长途费)：4007-999-999 途牛呼叫中心位于南京来电将统一显示为 025-86859999</p>
+            </div>
+            <div class="about_link">
+                <a href="#">关于我们</a>
+                <a href="#">联系我们</a>
+                <a href="#">投诉建议</a>
+                <a href="#">广告服务</a>
+                <a href="#">网站招聘</a>
+                <a href="#">免责声明</a>
+                <a href="#">旅游券</a>
+                <a href="#">用户协议</a>
+                <a href="#">隐私保护</a>
+                <a href="#">帮助中心</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
